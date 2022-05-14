@@ -1,13 +1,17 @@
-const BestPokemon = () => {
-    const habilidades = ['Anticipation', 'Adaptability', 'Run-Away']
+import React from "react"
+
+
+const BestPokemon = (props) => {
+
     return <div>
         <ul>
-            {habilidades.map((habilidad, index) => {
+            {props.habilidades.map((habilidad, index) => {
                 return <li key={index}>{habilidad}
 
                 </li>
             })}
         </ul>
+        <h2>Likes para Pidgey : {props.likes}</h2>
     </div>
 
 }
